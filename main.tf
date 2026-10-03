@@ -1,5 +1,14 @@
 terraform {
   required_version = ">= 1.5.0"
+
+  cloud {
+    organization = "Vishnuchinnas"
+
+    workspaces {
+      name = "Terraform-Projects"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
