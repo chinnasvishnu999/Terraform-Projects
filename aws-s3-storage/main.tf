@@ -25,7 +25,7 @@ resource "aws_s3_bucket" "static_site_bucket" {
   force_destroy = true
 
   tags = {
-    Project     = "01-aws-s3-static-hosting"
+    Project     = "aws-s3-storage"
     Environment = "Dev"
     ManagedBy   = "Terraform"
   }
