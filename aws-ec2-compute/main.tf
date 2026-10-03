@@ -89,7 +89,7 @@ resource "aws_instance" "web" {
               dnf install -y httpd
               systemctl start httpd
               systemctl enable httpd
-              echo "<h1>Cloud Infrastructure Deployed via HCP Terraform - v2</h1>" > /var/www/html/index.html
+              echo "<h1>Cloud Infrastructure Deployed via HCP Terraform - v3</h1>" > /var/www/html/index.html
               EOF
 
   tags = {
