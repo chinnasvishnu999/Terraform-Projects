@@ -27,20 +27,20 @@ provider "aws" {
 
 # S3 bucket names must be globally unique across all AWS accounts,
 # so we append a random string to avoid naming collisions.
-resource "random_id" "bucket_suffix" {
-  byte_length = 4
-}
+# resource "random_id" "bucket_suffix" {
+#   byte_length = 4
+# }
 
-resource "aws_s3_bucket" "my_first_bucket" {
-  bucket = "terraform-learn-${random_id.bucket_suffix.hex}"
+# resource "aws_s3_bucket" "my_first_bucket" {
+#   bucket = "terraform-learn-${random_id.bucket_suffix.hex}"
 
-  tags = {
-    Environment = "Learning"
-    ManagedBy   = "Terraform"
-  }
-}
+#   tags = {
+#     Environment = "Learning"
+#     ManagedBy   = "Terraform"
+#   }
+# }
 
-output "bucket_name" {
-  description = "The globally unique name of the bucket created"
-  value       = aws_s3_bucket.my_first_bucket.bucket
-}
+# output "bucket_name" {
+#   description = "The globally unique name of the bucket created"
+#   value       = aws_s3_bucket.my_first_bucket.bucket
+# }
