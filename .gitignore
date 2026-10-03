@@ -1,6 +1,18 @@
-.terraform/
+# Compiled provider plugins & cached downloads
+**/.terraform/*
+
+# Local state files
 *.tfstate
 *.tfstate.*
+
+# Secret variables containing passwords or API tokens
 *.tfvars
 *.tfvars.json
-.terraform.lock.hcl
+
+# AWS credential spreadsheets & access keys
+*.csv
+*credentials*.csv
+
+# OS-generated files
+.DS_Store
+Thumbs.db
