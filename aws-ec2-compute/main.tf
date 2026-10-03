@@ -81,8 +81,8 @@ resource "aws_instance" "web" {
   subnet_id                   = data.aws_subnet.public_subnet.id
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
   associate_public_ip_address = true
+  user_data_replace_on_change = true # Forces replacement on script edits
 
-  # Cloud-init user script to install and launch an Apache web server
   user_data = <<-EOF
               #!/bin/bash
               dnf update -y
